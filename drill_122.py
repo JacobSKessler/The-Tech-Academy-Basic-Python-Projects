@@ -2,6 +2,8 @@
 
 import tkinter as tk
 from tkinter import *
+from tkinter import filedialog
+from tkinter.filedialog import askdirectory
 
 
 class ParentWindow(Frame):
@@ -30,7 +32,11 @@ class ParentWindow(Frame):
 
 #gets file path for dir
 def get_path(self):
+    global sourcePath
     sourcePath = filedialog.askdirectory()
+    print(sourcePath)#confirms path is grabbed correctly
+    self.entry1.delete(0, END)
+    self.entry1.insert(0, sourcePath)
 
 
 if __name__ == "__main__":
