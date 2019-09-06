@@ -29,12 +29,12 @@ def load_gui(self):
     self.text_email.grid(row=7,column=0,rowspan=1,columnspan=2,padx=(30,40),pady=(0,0),sticky=N+E+W)
 
     #list box and scroll bar
-    self.scrollbar1 = Scrollbar(self.master,orient=VERTIVAL)
+    self.scrollbar1 = Scrollbar(self.master,orient=VERTICAL)
     self.lstList1 = Listbox(self.master,exportselection=0,yscrollcommand=self.scrollbar1.set)
     self.lstList1.bind('<<ListboxSelect>>',lambda event: phonebook_func.onSelect(self,event))
     self.scrollbar1.config(command=self.lstList1.yview)
-    self.scrollbar1.grid(row=1,column=5,rowspan=7,columnspan=1,padx=(0,0),pady(0,0),sticky=N+E+S)
-    self.lstList1.grid(row=1,column=2,rowspan=7,columnspan=3,padx=(0,0),pady(0,0),sticky=N+E+S+W)
+    self.scrollbar1.grid(row=1,column=5,rowspan=7,columnspan=1,padx=(0,0),pady=(0,0),sticky=N+E+S)
+    self.lstList1.grid(row=1,column=2,rowspan=7,columnspan=3,padx=(0,0),pady=(0,0),sticky=N+E+S+W)
 
     #buttons
     self.btn_add = tk.Button(self.master,width=12,height=2,text='Add',command=lambda: phonebook_func.addToList(self))
@@ -50,9 +50,8 @@ def load_gui(self):
     phonebook_func.onRefresh(self)
 
 
-if__name__ == "__main__":
+if __name__ == "__main__":
     pass
-
 
 
 
