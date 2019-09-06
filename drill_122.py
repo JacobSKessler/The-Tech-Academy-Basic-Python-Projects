@@ -30,7 +30,7 @@ class ParentWindow(Frame):
 
 #gets file path for dir
 def get_path(self):
-    sourcePath = askdirectory()
+    sourcePath = filedialog.askdirectory()
 
 
 if __name__ == "__main__":
